@@ -1,7 +1,7 @@
 name: Mi primer pipeline
 on: push
 jobs:
-  test:
+  calidad:
     runs-on: ubuntu-latest
     steps:
       - name: Bajar el código
@@ -12,5 +12,7 @@ jobs:
           node-version: 20
       - name: Instalar dependencias
         run: npm install
+      - name: Lint
+        run: npm run lint
       - name: Correr los tests
         run: npm test
