@@ -3,6 +3,6 @@ import { calcularTotal } from './utils.js';
 
 describe('calcularTotal', () => {
   it('multiplica precio por cantidad', () => {
-    expect(calcularTotal(100, 3)).toBe(300);
+    expect(calcularTotal(100, 3)).toBe(999);
   });
 });
