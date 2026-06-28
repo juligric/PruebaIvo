@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "test": "vitest run",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "build": "echo 'Simulando el build... app armada con exito'"
   },
   "devDependencies": {
     "vitest": "^2.1.0",
