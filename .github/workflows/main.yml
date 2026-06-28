@@ -1,0 +1,8 @@
+name: Mi primer pipeline
+on: push
+jobs:
+  saludar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Decir hola
+        run: echo "Hola! El robot funciona"
