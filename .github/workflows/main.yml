@@ -21,6 +21,10 @@ jobs:
         run: npm test
       - name: Build
         run: npm run build
+      - name: Chequear secrets (diagnostico)
+        run: |
+          echo "ORG_ID -> largo: ${#VERCEL_ORG_ID}, empieza con: ${VERCEL_ORG_ID:0:5}"
+          echo "PROJECT_ID -> largo: ${#VERCEL_PROJECT_ID}, empieza con: ${VERCEL_PROJECT_ID:0:4}"
       - name: Instalar Vercel CLI
         run: npm install -g vercel
       - name: Bajar config de Vercel
