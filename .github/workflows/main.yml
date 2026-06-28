@@ -1,8 +1,16 @@
 name: Mi primer pipeline
 on: push
 jobs:
-  saludar:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - name: Decir hola
-        run: echo "Hola! El robot funciona"
+      - name: Bajar el código
+        uses: actions/checkout@v4
+      - name: Instalar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Instalar dependencias
+        run: npm install
+      - name: Correr los tests
+        run: npm test
